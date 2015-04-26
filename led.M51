@@ -1,0 +1,150 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        04/24/2015  17:47:46  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+D:\KEIL\C51\BIN\BL51.EXE led.obj TO led
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  led.obj (LED)
+  D:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+  D:\KEIL\C51\LIB\C51S.LIB (?C?OFFXADD)
+
+
+LINK MAP OF MODULE:  led (LED)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0004H     UNIT         _DATA_GROUP_
+            IDATA   000CH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0003H     ABSOLUTE     
+            CODE    0006H     0100H     UNIT         ?CO?LED
+            CODE    0106H     00C3H     UNIT         ?PR?INT0_LED?LED
+            CODE    01C9H     0019H     UNIT         ?PR?_DELAY10MS?LED
+            CODE    01E2H     0011H     UNIT         ?PR?MAIN?LED
+            CODE    01F3H     000CH     UNIT         ?C_C51STARTUP
+            CODE    01FFH     000CH     UNIT         ?C?LIB_CODE
+
+
+
+OVERLAY MAP OF MODULE:   led (LED)
+
+
+SEGMENT                          DATA_GROUP 
+  +--> CALLED SEGMENT          START    LENGTH
+----------------------------------------------
+?PR?INT0_LED?LED               0008H    0004H
+  +--> ?CO?LED
+  +--> ?PR?_DELAY10MS?LED
+
+*** NEW ROOT ***************************************************
+
+?C_C51STARTUP                  -----    -----
+  +--> ?PR?MAIN?LED
+
+
+
+SYMBOL TABLE OF MODULE:  led (LED)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+BL51 BANKED LINKER/LOCATER V6.22                                                      04/24/2015  17:47:46  PAGE 2
+
+
+  -------         MODULE        LED
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  D:00C0H         PUBLIC        P4
+  D:00C8H         PUBLIC        P5
+  B:00A8H.7       PUBLIC        EA
+  D:00A8H         PUBLIC        IE
+  C:0106H         PUBLIC        int0_led
+  D:00B8H         PUBLIC        IP
+  D:00D8H         PUBLIC        CCON
+  C:01E2H         PUBLIC        main
+  D:0098H         PUBLIC        SCON
+  C:01C9H         PUBLIC        _Delay10ms
+  D:0088H         PUBLIC        TCON
+  C:0006H         PUBLIC        WORD
+  B:0088H.0       PUBLIC        IT0
+  B:00A8H.0       PUBLIC        EX0
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          _DELAY10MS
+  D:0006H         SYMBOL        c
+  -------         DO            
+  D:0004H         SYMBOL        a
+  D:0005H         SYMBOL        b
+  -------         ENDDO         
+  C:01C9H         LINE#         36
+  C:01C9H         LINE#         37
+  C:01C9H         LINE#         41
+  C:01D2H         LINE#         42
+  C:01D2H         LINE#         43
+  C:01D4H         LINE#         44
+  C:01D4H         LINE#         45
+  C:01D8H         LINE#         46
+  C:01DAH         LINE#         48
+  C:01E1H         LINE#         50
+  -------         ENDPROC       _DELAY10MS
+  -------         PROC          INT0_LED
+  -------         DO            
+  D:0008H         SYMBOL        i
+  D:0009H         SYMBOL        j
+  D:0002H         SYMBOL        DOWN
+  D:000AH         SYMBOL        UP
+  -------         ENDDO         
+  C:0106H         LINE#         62
+  C:0121H         LINE#         67
+  C:0124H         LINE#         68
+  C:0127H         LINE#         69
+  C:0127H         LINE#         71
+  C:0147H         LINE#         72
+  C:0169H         LINE#         75
+  C:016EH         LINE#         76
+  C:0174H         LINE#         77
+  C:0184H         LINE#         79
+  C:018BH         LINE#         82
+  C:018EH         LINE#         83
+BL51 BANKED LINKER/LOCATER V6.22                                                      04/24/2015  17:47:46  PAGE 3
+
+
+  C:0191H         LINE#         84
+  C:0194H         LINE#         87
+  C:019BH         LINE#         88
+  C:01B0H         LINE#         91
+  -------         ENDPROC       INT0_LED
+  -------         PROC          MAIN
+  C:01E2H         LINE#         105
+  C:01E2H         LINE#         106
+  C:01E2H         LINE#         108
+  C:01E4H         LINE#         109
+  C:01E6H         LINE#         110
+  C:01E8H         LINE#         112
+  C:01E8H         LINE#         113
+  C:01E8H         LINE#         115
+  C:01EBH         LINE#         116
+  C:01EEH         LINE#         117
+  C:01F1H         LINE#         118
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        LED
+
+  -------         MODULE        ?C?OFFXADD
+  C:01FFH         PUBLIC        ?C?OFFXADD
+  -------         ENDMOD        ?C?OFFXADD
+
+Program Size: data=13.0 xdata=0 code=523
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
