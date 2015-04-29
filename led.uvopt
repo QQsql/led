@@ -179,10 +179,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>57</ColumnNumber>
+      <ColumnNumber>55</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>1</TopLine>
-      <CurrentLine>7</CurrentLine>
+      <TopLine>154</TopLine>
+      <CurrentLine>154</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\led.c</PathWithFileName>
       <FilenameWithoutPath>led.c</FilenameWithoutPath>
@@ -1548,9 +1548,9 @@
       <Documents>
         <Doc>
           <Name>.\led.c</Name>
-          <ColumnNumber>57</ColumnNumber>
-          <TopLine>1</TopLine>
-          <CurrentLine>7</CurrentLine>
+          <ColumnNumber>55</ColumnNumber>
+          <TopLine>154</TopLine>
+          <CurrentLine>154</CurrentLine>
         </Doc>
         <Doc>
           <Name>STC12C5A.H</Name>
